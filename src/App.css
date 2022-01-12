@@ -1,4 +1,123 @@
-.App {
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  background:  radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);;
+  
+}
+.App .submit-button{
+  border-radius: 20px;
+  border: none;
+  height: 2.5em;
+  outline: none;
+  padding: 2px;
+  background: #7c7c7c2b;
+  color:white;
+}
+.App .container{
   text-align: center;
+}
+.App .card {
+  justify-content: center;
+  margin:0 auto;
+  background: #000000d0;
+  color: black;
+  padding: 2em;
+  border-radius: 20px;
+  max-width: 500px;
+  background-color:  hsla(0, 0%, 0%, 0);
+  box-shadow: -38px -17px 68px 2px rgba(42, 7, 245, 0.2);
+}
+.App .date-and-time{
+  font-size: 25px;
+   font-weight: bold}
+.App .city {
+  font-size: 34px;
+   justify-content: center;
+  align-items: center;
+  margin:0 auto;
+}
+
+.App .weather-temperature .w-icon{
+ height: 84px;
+ width: 84px;
+}
+.App .weather-temperature .units{
+   position: relative;
+  font-size: 30px;
+ top:-64px;
+ right:-64px;
+}
+
+.App .temp {
+  font-size: 4em;
+  font-weight: lighter;
+}
+.App .description {
+  font-size: 30px;
+}
+
+.App .pressure {
+  font-size: 30px;
+}
+
+.App .humidity {
+  font-size: 30px;
+}
+
+.App .wind {
+  font-size: 30px;
+}
+ .App .search-input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em;
+  border-radius: 20px;
+  height: 2.5em;
+  border: none;
+  outline: none;
+  background: #7c7c7c2b;
+  padding: 2px;
+  color:white;
+}
+.App .search {
+  display: block;
+  margin: 0 auto;
+}
+.App .weather .active{
+  color:black;
+cursor:default;
+text-decoration: none;
+}
+.App .weather .active:hover{
+  text-decoration: none;
+}
+.App .label {
+ font-size: 15px;
+ color: cornsilk;
+text-decoration: underline ;
+ 
+}
+.App .contact {
+ text-decoration: none; 
+
+ }
+.App .weather-forecast{
+  margin-top:20px;
+  text-align:center;
+  color:black;
+}
+.App .forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.App .weather-forecast-temp{
+  font-size: 13px;
+}
+.App .weather-forecast-temp-min{
+  opacity: 0.5;
 }
 
