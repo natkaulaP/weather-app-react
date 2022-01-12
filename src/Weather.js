@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
 import axios from "axios";
 import "./Weather.css";
-
+import FormattedDate from "./FormattedDate"
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
@@ -24,14 +23,14 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+    searchCity();
   }
 
   function handleCityChange(event) {
     setCity(event.target.value);
   }
 
-  function search() {
+  function searchCity() {
     const apiKey = "8fc44c5f5ff712285df808b01c3aa136";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
@@ -54,7 +53,7 @@ export default function Weather(props) {
 
         <div className="weather" class="col-9">
           <h2 className="city">{weatherData.city}</h2>
-          <h3 className="date-and-time">Wednesday 13:05</h3>
+          <h3 className="date-and-time"><FormattedDate/></h3>
           <div className="clearfix weather-temperature">
             <img
               src="https://openweathermap.org/img/wn/10d@2x.png"
@@ -78,7 +77,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
+    searchCity();
     return "Loading...";
   }
 }
